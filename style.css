@@ -1,0 +1,39 @@
+body{
+    margin: 0px;
+}
+.container{
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer{
+    padding: 3px;
+    bottom: 0px;
+    position: fixed;
+    background-color: burlywood;
+    height: 30px;
+    width: 100%;
+    justify-content: center;
+}
+.content{
+    display: flex;
+}
+.input_login{
+    font-size: 24pt;
+}
+.input{
+    font-size: 16pt;
+}
+table,
+td {
+    text-align: center;
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: burlywood;
+    color: black;
+}
