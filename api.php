@@ -136,7 +136,6 @@ class API{
     }
     public function addOrder(){
         var_dump($_POST);
-        //array(6) { ["act"]=> string(8) "addOrder" ["name"]=> string(3) "bvz" ["address"]=> string(2) "q1" ["phone"]=> string(4) "1111" ["products"]=> array(2) { [0]=> string(1) "6" [1]=> string(1) "5" } ["pr_count"]=> array(2) { [0]=> string(1) "3" [1]=> string(1) "1" } }
         if(!isset($_POST['name']) || !isset($_POST['address']) || !isset($_POST['phone']) || !isset($_POST['products']) || !isset($_POST['pr_count'])){
             $this->error = 'Не все поля заполнены';
             return;
@@ -168,6 +167,7 @@ class API{
         foreach($navs as $url => $name){
             echo '<button '.($_SERVER['DOCUMENT_URI'] == $url ? 'disabled' : '').' onClick="location.href = \''.$url.'\'">'.$name.'</button>';
         }
+        echo '<a href="https://github.com/VzdutieJivota/ufis">github</a>';
         if($this->isAuthorized()) echo '<button style="right: 10px; position: absolute;" onclick="location.href = \'/ufis/?act=logout\'">Выйти</button>';
         echo '</div>';
     }
