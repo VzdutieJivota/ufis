@@ -62,8 +62,8 @@ class API{
         foreach(json_decode($d['products'],true) as $id => $count){
             if(!isset($products[$id])) $pr[] = 'Удаленный товар ('.$count.'шт, 0₽)';
             else{
-                $pr[] = $products[$id]['name'].' ('.$count.'шт, '.number_format($products['cost']*$count).'₽)';
-                $sum += number_format($products[$id]['cost']*$count);
+                $pr[] = $products[$id]['name'].' ('.$count.'шт, '.number_format($products[$id]['cost']*$count).'₽)';
+                $sum += $products[$id]['cost']*$count;
                 if($d['status'] != 0) $sumAll += $products[$id]['cost']*$count;
             } 
         }
